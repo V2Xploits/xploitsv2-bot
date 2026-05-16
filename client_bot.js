@@ -22,8 +22,8 @@ const PANEL_CHANNEL = process.env.PANEL_CHANNEL
 const ADMIN_ROLES = ['Mod Cool', 'Owner']    
 const ACCESS_ROLE   = 'Access'       
 
-const API          = 'https://xploits.lovable.app'
-const ADMIN_SECRET = 'Frenglish-&3v8.!?/3-Genkey'
+const API          = process.env.API
+const ADMIN_SECRET = process.env.ADMIN_SECRET
 function generateKey() {
   const seg = () => crypto.randomBytes(2).toString('hex').toUpperCase()
   return `${seg()}-${seg()}-${seg()}-${seg()}`

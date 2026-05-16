@@ -19,7 +19,7 @@ const BOT_TOKEN     = 'CLIENT_BOT_TOKEN'
 const CLIENT_ID     = 'CLIENT_BOT_CLIENT_ID'
 const GUILD_ID      = 'CLIENT_GUILD_ID'
 const PANEL_CHANNEL = 'CLIENT_PANEL_CHANNEL_ID'
-const ADMIN_ROLE    = 'Owner'        
+const ADMIN_ROLES = ['Mod Cool', 'Owner']    
 const ACCESS_ROLE   = 'Access'       
 
 const API          = 'https://xploits.lovable.app'
@@ -125,8 +125,8 @@ client.once('ready', async () => {
 client.on('interactionCreate', async interaction => {
 
   if (interaction.isChatInputCommand() && interaction.commandName === 'generatekey') {
-    const isAdmin = interaction.member.roles.cache.some(r => r.name === ADMIN_ROLE)
-                 || interaction.member.permissions.has('Administrator')
+   const isAdmin = interaction.member.roles.cache.some(r => ADMIN_ROLES.includes(r.name))
+             || interaction.member.permissions.has('Administrator')
 
     if (!isAdmin) {
       return interaction.reply({ embeds: [err('You do not have permission to use this command.')], ephemeral: true })

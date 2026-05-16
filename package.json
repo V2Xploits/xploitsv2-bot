@@ -1,0 +1,11 @@
+{
+  "name": "xploits-bot",
+  "version": "1.0.0",
+  "main": "client_bot.js",
+  "scripts": {
+    "start": "node client_bot.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.16.0"
+  }
+}

@@ -15,10 +15,10 @@ const {
 
 const crypto = require('crypto')
 
-const BOT_TOKEN     = 'CLIENT_BOT_TOKEN'
-const CLIENT_ID     = 'CLIENT_BOT_CLIENT_ID'
-const GUILD_ID      = 'CLIENT_GUILD_ID'
-const PANEL_CHANNEL = 'CLIENT_PANEL_CHANNEL_ID'
+const BOT_TOKEN     = process.env.BOT_TOKEN
+const CLIENT_ID     = process.env.CLIENT_ID
+const GUILD_ID      = process.env.GUILD_ID
+const PANEL_CHANNEL = process.env.PANEL_CHANNEL
 const ADMIN_ROLES = ['Mod Cool', 'Owner']    
 const ACCESS_ROLE   = 'Access'       
 
